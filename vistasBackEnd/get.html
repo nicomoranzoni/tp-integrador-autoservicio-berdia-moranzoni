@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consultar Productos</title>
+  </head>
+  <body>
+    <h3>Todos los productos</h3>
+
+    <section id="contenedor-productos"></section>
+
+    <script>
+      const contenedorProductos = document.getElementById(
+        "contenedor-productos",
+      ); //referencia a la section para meter los productos
+
+      //uso el back para traer los productos
+      async function cargarProductos() {
+        const response = await fetch("http://localhost:3000/api/products");
+        const data = await response.json(); //Accedemos al json dentro del cuerpo de la respuesta y lo convierte a obketo JS
+        const productos = data.payload; // traemos los objetos del array de products
+
+        //usamos un foreach para hacer una tarjeta por cada producto
+        productos.forEach((producto) => {
+          contenedorProductos.innerHTML += `
+            
+            <div class= "card-producto">
+                <img src="${producto.image}" alt="${producto.name}"/>
+                <h4>${producto.name}</h4>
+                <p>$${producto.price}</p>
+            </div>
+
+            `;
+        });
+      }
+
+      cargarProductos(); //llama a la funcion para que se ejecute
+    </script>
+  </body>
+</html>
