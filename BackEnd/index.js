@@ -40,3 +40,71 @@ app.get("/api/products/:id", async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
+
+// POST create new product
+app.post("/api/products", async (req, res) => {
+    try{
+        // Gracias al middleware app.use(express.json()) el JSON recibido del formulario ya viene transformado en objeto JS
+    
+        // Aca ya directamente recibimos un objeto
+        const {category, image, name, price} = req.body; // Extraemos los valores parseados del cuerpo de la peticion HTTP
+    
+        const sql = "INSERT INTO products (name, image, category, price) VALUES (?, ?, ?, ?)";
+    
+        await connection.query(sql, [name, image, category, price]);
+    
+        res.status(201).json({
+            message: "Producto creado exitosamente"
+        });
+    }catch(error){
+        console.log("Error obtenido productos: " + error)
+        res.status(500).json({
+            message:"Error intebntando obtener los productos"
+        })
+    }
+});
+
+
+// PUT product
+app.put("/api/products", async (req, res) => {
+    try{
+        // Gracias al middleware app.use(express.json()) el JSON recibido del formulario ya viene transformado en objeto JS
+        const {id, name, image, price, category} = req.body;
+    
+        const sql = "UPDATE products SET name = ?, image = ?, price = ?, category = ? WHERE id = ?";
+    
+        await connection.query(sql, [name, image, price, category, id]);
+    
+        res.status(200).json({
+            message: "Producto actualizado exitosamente"
+        });
+    }catch(error){
+        console.log("Error obtenido productos: " + error)
+        res.status(500).json({
+            message:"Error intebntando obtener los productos"
+        })
+    }
+})
+
+
+
+// DELETE product
+app.delete("/api/products/:id", async (req, res) => {
+    try{
+        const id = req.params.id;
+    
+        // Los placeholders -> "?" nos ayudan a evitar los ataques de inyeccion SQL. Es nuestra manera de hacer consultas SQL mas seguras
+        const sql = "DELETE FROM products WHERE id = ?";
+        await connection.query(sql, [id]);
+    
+        res.status(200).json({
+            message: `Producto con id ${id} eliminado exitosamente`
+        });
+    }catch(error){
+        console.log("Error obtenido productos: " + error)
+        res.status(500).json({
+            message:"Error intebntando obtener los productos"
+        })
+    }
+});
+
