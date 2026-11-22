@@ -5,11 +5,13 @@ formulario.addEventListener("submit", (event) => {
   event.preventDefault();
 
   const nombre = document.getElementById("nombre").value.trim();
+  const mensajeError = document.getElementById("mensaje-error");
 
   if (nombre === "") {
-    alert("Ingresa tu nombre para avanzar!");
+    mensajeError.textContent = "Ingresa tu nombre para avanzar";
     return;
   }
+  mensajeError.textContent = ""; //limpia el mensaje si el error se corrije
 
   //introducimos el nombre del cliente y permite pasar a la parte de productos
   sessionStorage.setItem("nombreCliente", nombre);

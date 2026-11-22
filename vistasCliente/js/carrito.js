@@ -68,12 +68,15 @@ function guardarYActualizar() {
 
 //creamos la funcionalidad de boton de confirmar compra para luego emitir el ticket
 const botonConfirmar = document.getElementById("confirmar");
+const mensajeCarrito = document.getElementById("mensaje-carrito");
 
 botonConfirmar.addEventListener("click", () => {
   if (carrito.length === 0) {
-    alert("El carrito esta vacio");
+    mensajeCarrito.textContent =
+      "El carrito esta vacio, agregá productos para continuar!";
     return;
   }
+  mensajeCarrito.textContent = ""; //limpia el mensaje si el error se corrije
 
   const confirmado = confirm("Deseas confirmar la compra?");
   if (confirmado) {

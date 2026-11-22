@@ -7,6 +7,20 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
+.logo-bienvenida {
+  height: 70px;
+  margin-bottom: 10px;
+}
+
+.logo-img {
+  height: 50px;
+}
+
+main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
 
 /* ========================
    PANTALLA DE PRODUCTOS
@@ -14,13 +28,13 @@ body {
 
 #contenedor-tablets,
 #contenedor-celulares {
-  display: flex;
-  flex-wrap: wrap; /*wrap permite que no se amontonen las tarjetas*/
+  /*Usamos grid en este caso para dsitribuir los productos y que sea responsive automaticamente */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
 }
 
 .card-producto {
-  width: 200px;
   padding: 15px;
   background-color: #2e2e2e;
   border-radius: 10px;
@@ -186,6 +200,14 @@ body {
   background-color: #4a90d9;
 }
 
+main h2 {
+  color: #4a90d9;
+  font-size: 1.8rem;
+  border-left: 5px solid #4a90d9;
+  padding-left: 12px;
+  margin: 30px 0 20px 0;
+}
+
 .control-cantidad {
   display: flex;
   align-items: center;
@@ -213,4 +235,114 @@ body {
   font-size: 1.1rem;
   min-width: 20px;
   text-align: center;
+}
+
+/* ========================
+   PANTALLA DE TICKET
+   ======================== */
+.ticket-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  gap: 20px;
+}
+
+.ticket {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  width: 350px;
+  padding: 25px;
+  border-radius: 10px;
+  font-family: "Courier New", monospace;
+}
+
+.ticket-titulo {
+  text-align: center;
+  margin: 0;
+}
+
+.ticket-parrafo {
+  text-align: center;
+  margin: 5px 0 20px 0;
+  color: #666;
+}
+
+.ticket-datos p {
+  margin: 5px 0;
+}
+
+.ticket-linea {
+  border: none;
+  border-top: 1px dashed #999;
+  margin: 15px 0;
+}
+
+.ticket-total {
+  text-align: right;
+}
+
+.ticket-gracias {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.item-ticket p {
+  margin: 8px 0;
+  font-size: 0.9rem;
+}
+
+#volver {
+  border: none;
+  border-radius: 8px;
+  padding: 12px 30px;
+  background-color: #4a90d9;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#volver:hover {
+  background-color: #357abd;
+}
+
+/* ========================
+   RESPONSIVE 
+   ======================== */
+
+@media (max-width: 768px) {
+  /* centramos los contenedores d los producots */
+  #contenedor-tablets,
+  #contenedor-celulares {
+    justify-content: center;
+  }
+
+  /* cambiamos la distribucion del header */
+  .header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  /* El carrito ocupa todo el ancho */
+  .carrito {
+    padding: 15px;
+  }
+
+  /* los items del carrito se apilan  */
+  .item-carrito {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* ========================
+   MENSAJE - ERROR 
+   ======================== */
+
+.mensaje-error {
+  color: #e74c3c;
+  font-size: 0.9rem;
+  margin: 5px 0 0 0;
 }

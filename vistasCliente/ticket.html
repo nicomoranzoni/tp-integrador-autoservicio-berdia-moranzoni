@@ -4,16 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ticket</title>
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <main class="ticket">
-      <h1>Ticket de compra</h1>
-      <p>Cliente: <span id="nombre-cliente"></span></p>
-      <p>Fecha: <span id="fecha"></span></p>
+    <main class="ticket-main">
+      <div class="ticket">
+        <h2 class="ticket-titulo">TechStore</h2>
+        <p class="ticket-parrafo">Comprobante de compra</p>
 
-      <div id="contenedor-ticket"></div>
-      <h3>Total: $ <span id="total">0</span></h3>
+        <div class="ticket-datos">
+          <p>Cliente: <span id="nombre-cliente"></span></p>
+          <p>Fecha: <span id="fecha"></span></p>
+        </div>
+
+        <hr class="ticket-linea" />
+
+        <div id="contenedor-ticket"></div>
+
+        <hr class="ticket-linea" />
+
+        <h3 class="ticket-total">Total: $<span id="total">0</span></h3>
+
+        <p class="ticket-gracias">¡Gracias por su compra!</p>
+      </div>
+
       <button id="volver">Volver a empezar</button>
     </main>
 

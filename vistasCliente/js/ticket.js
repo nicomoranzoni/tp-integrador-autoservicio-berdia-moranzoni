@@ -25,7 +25,7 @@ carrito.forEach((item) => {
     </div>
   `;
 });
-totalSpan.textContent = total;
+totalSpan.textContent = formatearPrecio(total);
 
 //creamos un boton para volver a empezar una compra
 
