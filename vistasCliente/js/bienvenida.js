@@ -12,6 +12,6 @@ formulario.addEventListener("submit", (event) => {
   }
 
   //introducimos el nombre del cliente y permite pasar a la parte de productos
-  localStorage.setItem("nombreCliente", nombre);
+  sessionStorage.setItem("nombreCliente", nombre);
   window.location.href = "productos.html";
 });

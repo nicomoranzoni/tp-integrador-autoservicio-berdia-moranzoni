@@ -2,10 +2,10 @@
 const contenedorCarrito = document.getElementById("contenedor-carrito");
 const totalSpan = document.getElementById("total");
 const nombreClienteSpan = document.getElementById("nombre-cliente");
-const nombreCliente = localStorage.getItem("nombreCliente"); // recuperamos el nombre del cliente guardado en la bienvenida
+const nombreCliente = sessionStorage.getItem("nombreCliente"); // recuperamos el nombre del cliente guardado en la bienvenida
 nombreClienteSpan.textContent = nombreCliente; //ponemos el nombre del cliente dentro del span
 
-const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+const carrito = JSON.parse(sessionStorage.getItem("carrito")) || [];
 //misma diamica que en la funcion agregarAlCarrito, lee si hay elementos en el array y sino utiliza uno vacio
 
 function mostrarCarrito() {
@@ -20,9 +20,9 @@ function mostrarCarrito() {
         <div class="item-carrito">
         <img src="${item.image}" alt="${item.name}" />
         <h4>${item.name}</h4>
-        <p>Precio: $${item.price}</p>
+        <p>Precio: $${formatearPrecio(item.price)}</p>
         <p>Cantidad: ${item.cantidad}</p>
-        <p>Subtotal: $${subtotal}</p>
+        <p>Subtotal: $${formatearPrecio(subtotal)}</p>
         <button class="btn-cantidad" onclick="restarCantidad(${item.id})">-</button>
         <button class="btn-cantidad" onclick="sumarCantidad(${item.id})">+</button>
         <button class="btn-eliminar" onclick="eliminarProducto(${item.id})">Eliminar</button>
@@ -30,7 +30,7 @@ function mostrarCarrito() {
     `;
   });
 
-  totalSpan.textContent = total;
+  totalSpan.textContent = formatearPrecio(total);
 }
 
 mostrarCarrito();
@@ -60,9 +60,9 @@ function eliminarProducto(id) {
   guardarYActualizar();
 }
 
-//creamos una funcion que guarde y actualice en el LocalStorage para no repetir en cada funicon
+//creamos una funcion que guarde y actualice en el sessionStorage para no repetir en cada funicon
 function guardarYActualizar() {
-  localStorage.setItem("carrito", JSON.stringify(carrito));
+  sessionStorage.setItem("carrito", JSON.stringify(carrito));
   mostrarCarrito();
 }
 
@@ -80,3 +80,7 @@ botonConfirmar.addEventListener("click", () => {
     window.location.href = "ticket.html";
   }
 });
+
+function formatearPrecio(precio) {
+  return Number(precio).toLocaleString("es-AR");
+}
