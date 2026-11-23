@@ -10,7 +10,8 @@ function mostrarError(mensaje) {
 
 getProductForm.addEventListener("submit", async (event) => {
     event.preventDefault(); 
-    const idProd = event.target.idProd.value.trim();
+    console.log(event)
+    const idProd = event.target.id.value.trim();
     console.log(idProd);
 
 
