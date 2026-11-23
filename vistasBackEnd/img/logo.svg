@@ -1,0 +1,5 @@
+<svg width="240" height="80" viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="40" cy="40" r="32" fill="none" stroke="#4a90d9" stroke-width="4"/>
+  <text x="40" y="52" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="#4a90d9" text-anchor="middle">TS</text>
+  <text x="85" y="50" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#f9f4f4">TechStore</text>
+</svg>

@@ -346,3 +346,21 @@ main h2 {
   font-size: 0.9rem;
   margin: 5px 0 0 0;
 }
+
+/* ========================
+   BOTON DESCARGA PDF
+   ======================== */
+
+#descargar-pdf {
+  border: none;
+  border-radius: 8px;
+  padding: 12px 30px;
+  background-color: #27ae60;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#descargar-pdf:hover {
+  background-color: #229954;
+}
