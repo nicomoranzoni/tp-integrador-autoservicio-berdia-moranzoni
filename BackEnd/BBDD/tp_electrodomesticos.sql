@@ -50,16 +50,16 @@ INSERT INTO `products` (`id`, `name`, `image`, `category`, `price`, `active`) VA
 (8, 'Tablet Lenovo Tab One 8.7 4GB 64GB', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjufDOzs0bhLA_MJrrJjRf5BtwKw_GVHw96XIKesIXSg&s=10', 'tablet', 289999, 1),
 (9, 'Tablet Lenovo Tab Plus 11.5 8 GB 256GB', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKCvwsAqz2lEzM_dYDADoX_0V7dSMha9Hnfqf2O_mBHk4mmbqh8jZ29FgN&s=10', 'tablet', 600000, 1),
 (10, 'Tablet Amazon Kids Fire HD 10 Azul 32GB', 'https://m.media-amazon.com/images/I/61ugA0LAAjL._AC_UL450_SY450_QL70_.jpg', 'tablet', 250000, 1),
-(11, 'Apple iPhone 17 Sage 12 RAM 256GB', 'https://via.placeholder.com/150', 'celular', 200000, 1),
-(12, 'Apple iPhone 16 Negro 8 RAM 128GB', 'https://via.placeholder.com/150', 'celular', 170000, 1),
-(13, 'Samsung Galaxy A57 Awesome Lilac 8 RAM 256GB', 'https://via.placeholder.com/150', 'celular', 90000, 1),
-(14, 'Samsung Galaxy S25 FE Navy 12 RAM 256GB', 'https://via.placeholder.com/150', 'celular', 180000, 1),
-(15, 'Xiaomi Redmi Note 15 Pro Glacier Blue 8 RAM 256GB', 'https://via.placeholder.com/150', 'celular', 80000, 1),
-(16, 'Xiaomi Poco X8 Pro Negro 8 RAM 256GB', 'https://via.placeholder.com/150', 'celular', 60000, 1),
-(17, 'Motorola Moto G86 Power Cereza 8 RAM 256GB', 'https://via.placeholder.com/150', 'celular', 85000, 1),
-(18, 'Motorola Edge 70 Fusion Sporting Green 8 RAM 256GB', 'https://via.placeholder.com/150', 'celular', 90000, 1),
-(19, 'Google Pixel 9 Obsidian 12 RAM 128GB', 'https://via.placeholder.com/150', 'celular', 60000, 1),
-(20, 'Google Pixel 8 Rosa 8 RAM 128GB', 'https://via.placeholder.com/150', 'celular', 87000, 1);
+(11, 'Apple iPhone 17 Sage 12 RAM 256GB', 'https://imgs.search.brave.com/x8bJv6vbwp1LkY5U2NkvJqHF3OG38IORzDJugdAmaig/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/amJoaWZpLmNvbS5h/dS9jZG4vc2hvcC9m/aWxlcy84MTYxMDQt/UHJvZHVjdC0wLUkt/NjM4OTMwNTU3Mjc5/MDk2MTgwLmpwZz92/PTE3NTc5MDQ1NDYm/d2lkdGg9NDgw', 'celular', 200000, 1),
+(12, 'Apple iPhone 16 Negro 8 RAM 128GB', 'https://imgs.search.brave.com/QV7eMa03DgcKfFeLKb2V8ksoHx6oJgP97T50g2pWj4w/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90aHVt/Yi5wY2NvbXBvbmVu/dGVzLmNvbS93LTUz/MC01MzAvYXJ0aWNs/ZXMvMTA4NS8xMDg1/NTAyMS8xODE3LWFw/cGxlLWlwaG9uZS0x/Ni0xMjgtZ2ItbmVn/cm8uanBn', 'celular', 170000, 1),
+(13, 'Samsung Galaxy A57 Awesome Lilac 8 RAM 256GB', 'https://imgs.search.brave.com/qh8ROOkEEKOrAFcqdMj0mbzE4r4FwiILyzpIwHbq1q0/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/cGFpaW50ZXJuYXRp/b25hbC5pbi9fbmV4/dC9pbWFnZT91cmw9/aHR0cHM6Ly9iYWNr/ZW5kLnBhaWludGVy/bmF0aW9uYWwuaW4v/bWVkaWEvaW1hZ2Vz/L0xLTy53ZWJwJnc9/Mzg0MCZxPTc1', 'celular', 90000, 1),
+(14, 'Samsung Galaxy S25 FE Navy 12 RAM 256GB', 'https://imgs.search.brave.com/POTKxWqqVEzKBIlQ5rULLEOq2jLSYoDbBuqNEM_rA0g/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuc2Ftc3VuZy5j/b20vaXMvaW1hZ2Uv/c2Ftc3VuZy9wNnBp/bS9hci9zbS1zNzMx/YmRibWFyby9nYWxs/ZXJ5L2FyLWdhbGF4/eS1zMjUtZmUtc20t/czczMS1zbS1zNzMx/YmRibWFyby01NDky/NzI5MDY_JFE5MF8y/MDUyXzE2NDFfSlBH/JA', 'celular', 180000, 1),
+(15, 'Xiaomi Redmi Note 15 Pro Glacier Blue 8 RAM 256GB', 'https://imgs.search.brave.com/j59I_Hjm6fLOT1alTbjd6BEEqe2Hp_2GPVcqho1vaSk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/aWRlYWxvLmNvbS9m/b2xkZXIvUHJvZHVj/dC8yMDg3NDkvNy8y/MDg3NDk3NDgvczFf/cHJvZHVrdGJpbGRf/bWF4L3hpYW9taS1y/ZWRtaS1ub3RlLTE1/LXByby01Zy04Z2It/MjU2Z2ItZ2xhY2ll/ci1ibHVlLmpwZw', 'celular', 80000, 1),
+(16, 'Xiaomi Poco X8 Pro Negro 8 RAM 256GB', 'https://imgs.search.brave.com/lV6V10xV6LET4o8tXEV45PWyPbVhu3y3UeLGmVf9hh4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFVMmNLd3YyMEwu/anBn', 'celular', 60000, 1),
+(17, 'Motorola Moto G86 Power Cereza 8 RAM 256GB', 'https://imgs.search.brave.com/AvhHK3Q-JC6ORPImiQQHiKxkPRQl-1DLu4Umf6gWKLc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pNS1t/eC53YWxtYXJ0aW1h/Z2VzLmNvbS9hc3Iv/MDE5YTFkYWMtM2Uz/Yy00ZGI1LTg5OTct/YWMwNTkxMjNlODgy/LjlmMzNhZmYxMTkw/ZWUyNTJlZWRiOGUw/YjM3ZmU0NDMwLmpw/ZWc_b2RuSGVpZ2h0/PTY0MCZvZG5XaWR0/aD02NDAmb2RuQmc9/RkZGRkZG', 'celular', 85000, 1),
+(18, 'Motorola Edge 70 Fusion Sporting Green 8 RAM 256GB', 'https://imgs.search.brave.com/4pKO7aEl6j5OHr27eF7iohZQB0Wh3PDWspL0JJ9CpZM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/amJoaWZpLmNvbS5h/dS9jZG4vc2hvcC9m/aWxlcy84OTU2Njgt/UHJvZHVjdC0wLUkt/NjM5MTk2ODM5MDA0/NDExNDIxLmpwZz92/PTE3ODQwODcxNjY', 'celular', 90000, 1),
+(19, 'Google Pixel 9 Obsidian 12 RAM 128GB', 'https://imgs.search.brave.com/AQ2AbSZtBvEfNQ73qM4Al28R8xkhkUpDqGsB9T2wXMs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pYnJh/dC5ydS91cGxvYWQv/Y3NzaW5saW5lcl93/ZWJwL2libG9jay81/MmEvdW53aTc4MzFp/ZzdiaGUycXQ3bHJp/aW51Y3dqNmpsczAu/d2VicA', 'celular', 60000, 1),
+(20, 'Google Pixel 8 Rosa 8 RAM 128GB', 'https://imgs.search.brave.com/pQY6zPUK1xe_QpiJ7PqDtainJIsCwZ4_QPqmHkmKqtw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cG93ZXJwbGFuZXRv/bmxpbmUuY29tL2Nk/bmFzc2V0cy9nb29n/bGVfcGl4ZWxfOF81/Z184Z2JfMTI4Z2Jf/cm9zYV90ZWxlZm9u/b19tb3ZpbF8wMl9h/ZF9sLmpwZw', 'celular', 87000, 1);
 -- --------------------------------------------------------
 
 --

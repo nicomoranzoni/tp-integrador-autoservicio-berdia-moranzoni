@@ -7,7 +7,9 @@ import { insertNewUser } from "../models/user.models.js";
 // Crear usuario admin
 export const createNewUser = async (req, res) => {
   try {
+    console.log(req.body)
     const { name, email, password } = req.body;
+    console.log(name, email, password)
 
     const [result] = await insertNewUser(name, email, password);
 

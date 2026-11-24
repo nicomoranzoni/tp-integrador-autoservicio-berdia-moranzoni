@@ -1,3 +1,4 @@
+
 import mysql2 from "mysql2/promise";
 import environments from "../config/environments.js";
 const { database } = environments;
